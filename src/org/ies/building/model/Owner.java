@@ -13,6 +13,10 @@ public class Owner {
         this.apellidos = apellidos;
     }
 
+    public void showInfo() {
+        System.out.println("La informacion del propietario es:" + getNif() + getNombre() + getApellidos());
+    }
+
     public String getNif() {
         return nif;
     }

@@ -14,6 +14,36 @@ public class Building {
         this.apartments = apartments;
     }
 
+    public void showInfo () {
+        System.out.println("La informacion del edificio es:" + getDireccion() + getMunicipio() + getApartments());
+    }
+
+    public Apartment findApartment(int planta, String puerta) {
+            for (Apartment apartment : apartments){
+                if (apartment.getPuerta().equals(puerta) && apartment.getPlanta() == planta){
+                    return apartment;
+                }
+            }
+            return null;
+        }
+
+        public void showFloorApartments (int planta) {
+            for (Apartment apartment: apartments){
+                if (apartment.getPlanta() == planta){
+                    apartment.showInfo();
+            }
+        }
+        }
+
+        public Owner findOwners (int planta, String puerta) {
+         Apartment apartment = findApartment(planta, puerta);
+         if(apartment != null){
+             apartment.getOwners();
+         }
+         return null;
+        }
+
+
     public String getDireccion() {
         return direccion;
     }

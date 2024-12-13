@@ -14,6 +14,10 @@ public class Apartment {
         this.owners = owners;
     }
 
+    public void showInfo() {
+        System.out.println("La informacion del apartamento es:" + getPlanta() + getPuerta() + getOwners());
+    }
+
     public int getPlanta() {
         return planta;
     }
